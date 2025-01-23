@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Kaleb Maloof" />
+    <meta
+      name="description"
+      content="Kaleb Maloof's journey through school, jobs, and projects, drawn as an interactive git commit graph."
+    />
+    <title>Kaleb Maloof | Journey</title>
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=JetBrains+Mono:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="journey-page">
+    <header class="border-bottom">
+      <nav
+        class="container d-flex flex-wrap align-items-center justify-content-between gap-2 py-3"
+        aria-label="Primary"
+      >
+        <a class="brand" href="./index.html">Kaleb <span class="accent">.</span></a>
+        <ul class="nav-links list-unstyled d-flex align-items-center gap-2 gap-sm-4 m-0">
+          <li><a href="./index.html">Professional</a></li>
+          <li>
+            <a href="./personal.html">Personal</a>
+          </li>
+          <li><a href="./journey.html" class="is-active" aria-current="page">Journey</a></li>
+          <li>
+            <a
+              class="btn-pill"
+              href="./assets/Kaleb_Maloof_Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container py-5">
+        <h1 class="display-title">My <span class="accent">journey</span></h1>
+        <p class="lead muted mb-0">
+          Each job is a branch and each project is a commit. Select a commit to jump to its card.
+        </p>
+      </section>
+
+      <div class="container pb-5">
+        <div class="panel" data-journey>
+          <div class="journey__canvas" data-journey-canvas></div>
+          <ul class="journey__legend" data-journey-legend></ul>
+          <ol class="visually-hidden" data-journey-list></ol>
+        </div>
+      </div>
+
+      <section class="container py-5">
+        <h2 class="section-title">Experience</h2>
+        <div class="row g-3" data-experience></div>
+      </section>
+
+      <section class="container py-5">
+        <h2 class="section-title">Projects</h2>
+        <div class="row g-3" data-projects></div>
+      </section>
+    </main>
+
+    <footer class="border-top py-4">
+      <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <p class="brand m-0">Kaleb Maloof</p>
+        <ul class="list-unstyled d-flex gap-3 m-0">
+          <li>
+            <a
+              class="icon-circle"
+              href="https://linkedin.com/in/kalebmaloof"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn profile"
+              ><i class="bi bi-linkedin" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="icon-circle"
+              href="https://github.com/MaloofDev"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub profile"
+              ><i class="bi bi-github" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a class="icon-circle" href="mailto:kalebjmaloof@gmail.com" aria-label="Email Kaleb"
+              ><i class="bi bi-envelope" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/journey.js"></script>
+  </body>
+</html>

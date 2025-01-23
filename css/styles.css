@@ -1,0 +1,426 @@
+:root {
+  --accent: #4fd8c4;
+  --bg: #0e1116;
+  --panel: #171c23;
+  --line: #262d37;
+  --text: #e8ecf1;
+  --muted: #8d97a5;
+  --display: "JetBrains Mono", ui-monospace, monospace;
+
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--text);
+  --bs-body-font-family: "IBM Plex Sans", system-ui, sans-serif;
+  --bs-border-color: var(--line);
+  --bs-link-color-rgb: 79, 216, 196;
+  --bs-link-hover-color-rgb: 232, 236, 241;
+  --bs-heading-color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.label {
+  color: var(--accent);
+  font-family: var(--display);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.brand {
+  color: var(--text);
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links a:not(.btn-pill) {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links .is-active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+.btn-pill {
+  display: inline-block;
+  padding: 0.4rem 1.1rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-pill:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.display-title {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+}
+
+.headshot {
+  width: min(100%, 16rem);
+  height: auto;
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+}
+
+.stat-value {
+  display: block;
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.section-title::before {
+  content: "// ";
+  color: var(--accent);
+}
+
+.panel {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+.panel img,
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo {
+  aspect-ratio: 3 / 1;
+}
+
+.screenshot,
+.photo {
+  aspect-ratio: 16 / 10;
+  object-position: top;
+}
+
+.photo-tall {
+  aspect-ratio: 4 / 5;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.stack-list li {
+  margin-bottom: 0.5rem;
+}
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gif-grid img {
+  width: calc(33.333% - 0.34rem);
+  margin: 0;
+  aspect-ratio: 1;
+}
+
+.song {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+@media (max-width: 575.98px) {
+  .brand {
+    font-size: 1.15rem;
+  }
+
+  .nav-links {
+    font-size: 0.9rem;
+  }
+
+  .nav-links .btn-pill {
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+/* Journey page */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.journey-page {
+  --amber: #f2b84b;
+  --violet: #b39dff;
+  --coral: #ff7a6b;
+}
+
+.branch-main {
+  --branch-color: var(--accent);
+}
+
+.branch-videeko {
+  --branch-color: var(--amber);
+}
+
+.branch-minuteman {
+  --branch-color: var(--violet);
+}
+
+.branch-omnitrust {
+  --branch-color: var(--coral);
+}
+
+.journey-page .exp-panel {
+  border-top: 3px solid var(--branch-color);
+}
+
+.journey-page [data-card] {
+  scroll-margin-top: 2rem;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Components: journey graph */
+.journey__canvas {
+  position: relative;
+}
+
+.journey__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.journey__svg--vertical {
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
+.journey__svg text {
+  font-family: var(--bs-body-font-family);
+  font-size: 13px;
+}
+
+.journey__line {
+  fill: none;
+  stroke: var(--branch-color);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.journey__line--future {
+  stroke-dasharray: 8 7;
+  stroke-linecap: butt;
+}
+
+.journey__arrow {
+  fill: var(--branch-color);
+}
+
+.journey__break-bg {
+  fill: var(--panel);
+}
+
+.journey__break {
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+
+.journey__axis {
+  stroke: var(--line);
+}
+
+.journey__year {
+  fill: var(--muted);
+}
+
+.journey__svg .journey__year {
+  font-size: 12px;
+}
+
+.journey__commit {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.journey__commit:focus,
+.journey__commit:focus-visible {
+  outline: none;
+}
+
+.journey__dot {
+  fill: var(--panel);
+  stroke: var(--branch-color);
+  stroke-width: 3;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.15s ease;
+}
+
+.journey__commit--head .journey__dot {
+  fill: var(--branch-color);
+}
+
+.journey__commit--future .journey__dot {
+  fill: var(--bg);
+  stroke-dasharray: 4 3;
+}
+
+.journey__ring {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2;
+  opacity: 0;
+}
+
+.journey__commit:hover .journey__dot,
+.journey__commit:focus-visible .journey__dot {
+  transform: scale(1.35);
+}
+
+.journey__commit:focus-visible .journey__ring {
+  opacity: 1;
+}
+
+.journey__label {
+  fill: var(--text);
+}
+
+.journey__label--branch {
+  fill: var(--branch-color);
+}
+
+.journey__svg .journey__label--head {
+  font-weight: 600;
+}
+
+.journey__commit:hover .journey__label,
+.journey__commit:focus-visible .journey__label {
+  text-decoration: underline;
+}
+
+.journey__tooltip {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-width: 17rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 14px));
+}
+
+.journey__tooltip[hidden] {
+  display: none;
+}
+
+.journey__tooltip-title {
+  color: var(--text);
+}
+
+.journey__tooltip-range {
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.journey__tooltip-summary {
+  color: var(--muted);
+}
+
+.journey__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 1.25rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  list-style: none;
+}
+
+.journey__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.journey__swatch {
+  width: 1.5rem;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--branch-color);
+}
+
+.is-highlighted {
+  outline: 2px solid var(--branch-color, var(--accent));
+  outline-offset: 4px;
+  box-shadow: 0 0 0 8px rgba(79, 216, 196, 0.12);
+}
