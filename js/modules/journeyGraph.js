@@ -1,5 +1,5 @@
 import { journey } from "../data/journey.js";
-
+//The interactive journey graph is a nice touch. I like how you generate the SVG dynamically with JavaScript and adapt the layout for different screen sizes.
 const SVG_NS = "http://www.w3.org/2000/svg";
 const HIGHLIGHT_MS = 1500;
 const GAP_UNITS = 3;
