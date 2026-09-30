@@ -1,3 +1,5 @@
+/*I like that the hero statistics are calculated dynamically instead of being hardcoded. 
+This is a simple but effective way to keep the content easier to maintain over time.*/
 import { site } from "../data/site.js";
 import { experience } from "../data/experience.js";
 import { projects } from "../data/projects.js";
