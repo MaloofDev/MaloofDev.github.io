@@ -1,3 +1,4 @@
+//I like how you separated the content data from the rendering logic. It makes the cards easier to reuse, update, and maintain.
 export const experience = [
   {
     id: "exp-omnitrust",
