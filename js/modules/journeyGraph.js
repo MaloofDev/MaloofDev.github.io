@@ -1,5 +1,5 @@
 import { journey } from "../data/journey.js";
-
+//The interactive journey graph is a nice touch. I like how you generate the SVG dynamically with JavaScript and adapt the layout for different screen sizes.
 const SVG_NS = "http://www.w3.org/2000/svg";
 const HIGHLIGHT_MS = 1500;
 const GAP_UNITS = 3;
@@ -103,7 +103,7 @@ function buildSvg(mode, lanes) {
   }));
   const head = commits.find((commit) => commit.type === "head");
   const future = commits.find((commit) => commit.type === "future");
-
+//Nice attention to accessibility. I like that you included ARIA attributes and keyboard interactions instead of relying only on mouse input.
   const svg = svgEl("svg", {
     class: `journey__svg journey__svg--${mode}`,
     viewBox: `0 0 ${layout.width} ${layout.height}`,
