@@ -103,7 +103,7 @@ function buildSvg(mode, lanes) {
   }));
   const head = commits.find((commit) => commit.type === "head");
   const future = commits.find((commit) => commit.type === "future");
-
+//Nice attention to accessibility. I like that you included ARIA attributes and keyboard interactions instead of relying only on mouse input.
   const svg = svgEl("svg", {
     class: `journey__svg journey__svg--${mode}`,
     viewBox: `0 0 ${layout.width} ${layout.height}`,
